@@ -1,12 +1,7 @@
-import webbrowser
-
-import qtpy
 import sys
 import os
 
-from PySide6.QtCore import QUrl, Slot, Qt
-from PySide6.QtWebEngineWidgets import QWebEngineView
-from qtpy import QtCore, QtWidgets, QtGui
+from qtpy import QtWidgets
 
 ui_path = os.path.join(os.path.dirname(__file__), "qt/browser.ui")
 
