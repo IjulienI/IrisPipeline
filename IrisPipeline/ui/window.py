@@ -10,11 +10,6 @@ from qtpy import QtCore, QtWidgets, QtGui
 
 ui_path = os.path.join(os.path.dirname(__file__), "qt/browser.ui")
 
-
-# les objets du ui sont accessibles via self
-# self.publish_cb.setText('publish')
-# self.work_cb.setText('work')
-
 class WebWindow(QtWidgets.QMainWindow):
     def __init__(self, url: str, title: str = "Web", size=(1024, 750), parent=None):
         super().__init__(parent)
@@ -31,7 +26,7 @@ class WebWindow(QtWidgets.QMainWindow):
 
 class Browser(QtWidgets.QMainWindow):
 
-    cb = QtWidgets.QApplication.clipboard()  # exemple de clipboard
+    cb = QtWidgets.QApplication.clipboard()
 
     def __init__(self):
         super(Browser, self).__init__()
@@ -57,7 +52,5 @@ class Browser(QtWidgets.QMainWindow):
 app = QtWidgets.QApplication(sys.argv)
 b = Browser()
 b.show()
-
-#browser = QtWidgets.QFileDialog().exec_()
 
 app.exec()
