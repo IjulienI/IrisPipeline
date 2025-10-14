@@ -1,16 +1,7 @@
-import pathlib
-
+# config
 root = "C:/Users/julien.soum/Documents/PipelinePath"
-target = "assets/character/publish/geo"
 
 template = {
-    "asset_type" : "...",
-    "asset_name" : "...",
-    "asset_department" : "...",
-    "asset_task" : "..."
+    "asset_type" : { "glob" : "assets/{asset_type}", "regex" : "assets/(?P<asset_type>.*)"},
+    "asset_name" : { "glob" : "assets/{asset_type}/{asset_name}", "regex" : "assets/(?P<asset_type>.*)/(?P<asset_name>.*)"}
 }
-
-found = pathlib.Path(root).glob(target)
-
-for f in found:
-    print(f)
