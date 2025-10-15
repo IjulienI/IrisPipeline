@@ -1,1 +1,1 @@
-from iris.conf.entity import *
+from .entities import *
