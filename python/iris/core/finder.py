@@ -44,6 +44,6 @@ if __name__ == "__main__":
     print("Main test starting...")
     print("Main test starting...")
 
-    search_input = "asset_type"
+    search_input = "asset_name"
     pprint(find(search_input))
     

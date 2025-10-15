@@ -1,1 +1,1 @@
-from resolve import *
+from .resolve import *
