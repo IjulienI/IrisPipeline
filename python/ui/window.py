@@ -1,7 +1,6 @@
 import sys
 import os
 
-from Qt.QtCompat import loadUi
 from qtpy import QtWidgets
 from iris import conf
 from iris.core.finder import find
@@ -10,10 +9,9 @@ ui_path = os.path.join(os.path.dirname(__file__), "qt/browser.ui")
 
 class Browser(QtWidgets.QMainWindow):
 
-    cb = QtWidgets.QApplication.clipboard()
-
     def __init__(self):
         super(Browser, self).__init__()
+        from qtpy.uic import loadUi
         loadUi(ui_path, self)
         self.setWindowTitle(conf.browser_title)
         self.lw_asset_type.itemClicked.connect(self.fill_asset_name)
